@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.StudentsPageView"
+             Title="StudentsPageView">
+    <VerticalStackLayout>
+        <ListView ItemsSource="{Binding Students}" SelectedItem="{Binding SelectedStudent}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding FIO}"/>
+                            <Label Text="{Binding Birthday}"/>
+                            <Label Text="{Binding Gender}"/>
+                            <Label Text="{Binding Address}"/>
+                            <Label Text="{Binding Group.Number}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <HorizontalStackLayout>
+            <Button Text="Edit" Clicked="EditStudentClick"/>
+            <Button Text="Delete" Clicked="DeleteStudentClick"/>
+            <Button Text="Add" Clicked="AddStudentClick"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

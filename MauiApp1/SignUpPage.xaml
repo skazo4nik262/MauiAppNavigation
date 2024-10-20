@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.SignUpPage"
+             Title="SignUpPage">
+    <StackLayout>
+        <HorizontalStackLayout>
+            <Label Text="Login:" Margin="0,12,10,0"/>
+            <Entry Text="{Binding User.Login}" Placeholder="Login" PlaceholderColor="LightGray" MaxLength="40" MinimumWidthRequest="185"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="Password:" Margin="0,12,10,0"/>
+            <Entry Text="{Binding User.Password}" IsPassword="True" Placeholder="Give me your password" PlaceholderColor="LightGray" MaxLength="30"/>
+        </HorizontalStackLayout>
+        <Button Text="Sign In" Clicked="SignUpClick"/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.GroupAddServicesView"
+             Title="GroupAddServicesView">
+    <VerticalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="Number" Margin="0,12,10,0"/>
+            <Entry Text="{Binding Group.Number}" Placeholder="1135" PlaceholderColor="LightGray"/>
+        </HorizontalStackLayout>
+        <!--<HorizontalStackLayout>
+            <Label Text="Students" Margin="0,12,10,0"/>
+            <CollectionView ItemsSource="{Binding Students}" SelectionMode="Multiple" SelectedItems="{Binding SelectedStudents}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <HorizontalStackLayout>
+                            <Label Text="{Binding FIO}" Margin=" 0,0,10,0"/>
+                            <Label Text="{Binding Gender, StringFormat=Пол: {0}}"/>
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </HorizontalStackLayout>-->
+        <HorizontalStackLayout>
+            <Button Text="Save" Clicked="SaveClick"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
