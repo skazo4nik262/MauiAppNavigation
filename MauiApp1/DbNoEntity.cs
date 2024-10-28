@@ -82,7 +82,7 @@ namespace MauiApp1
             };
             return getGroup;
         }
-        public async Task/*<int>*/ AddStudent(Student student)
+        public async Task<int> AddStudent(Student student)
         {
             await Task.Delay(100);
             Student newStudent = new Student()
@@ -96,7 +96,7 @@ namespace MauiApp1
             };
             Students.Add(newStudent);
             int a = lastStudentId - 1;
-            //return a;
+            return a;
         }
         public async Task AddUser(User user)
         {

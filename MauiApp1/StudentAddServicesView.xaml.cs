@@ -28,7 +28,7 @@ public partial class StudentAddServicesView : ContentPage
         Student.GroupId = SelectedGroup.Id;
         Student.SetGroup();
         DbNoEntity.Instance.AddStudent(Student);
-        //int studentId = await DbNoEntity.Instance.AddStudent(Student);
-        //DbNoEntity.Instance.GroupAddStudent(SelectedGroup.Id, studentId);
+        int studentId = await DbNoEntity.Instance.AddStudent(Student);
+        DbNoEntity.Instance.GroupAddStudent(SelectedGroup.Id, studentId);
     }
 }
